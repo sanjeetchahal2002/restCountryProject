@@ -1,7 +1,9 @@
+import {useContext} from  'react'
 import {PiMagnifyingGlassLight} from 'react-icons/pi'
+import { ThemeContext } from '../App';
 function SearchBar(props){
-    let {setCountrySearch,setFilter,isDark,isDarkMode} = props
-    
+    const {isDark,isDarkMode} = useContext(ThemeContext)
+    let {setCountrySearch,setFilter} = props
     return(
         <div className={`searchBar ${isDarkMode}`}>
             <span className={!isDark ? 'searchBar-light' : 'searchBar-dark'}>
@@ -18,6 +20,7 @@ function SearchBar(props){
                 <option name="" id="">Asia</option>
                 <option name="" id="">Europe</option>
                 <option name="" id="">Oceania</option>
+                <option name="" id="">Antarctic</option>
             </select>
         </div>
     )

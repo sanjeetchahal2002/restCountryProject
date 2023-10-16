@@ -1,4 +1,3 @@
-
 function Card(props){
     let {flags,name,population,region,capital} = props.country
     return(
