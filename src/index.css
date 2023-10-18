@@ -201,6 +201,7 @@ a {
 
 .dark .card{
   background-color: hsl(209, 23%, 22%);
+  color: white;
 }
 
 .dark .navbar-button > button{
