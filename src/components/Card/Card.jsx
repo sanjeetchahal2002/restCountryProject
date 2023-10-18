@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom"
+
 function Card(props){
     let {flags,name,population,region,capital} = props.country
     return(
+        <Link to = {`/country/${name.common}`}>
         <div className="card">
             <img src= {flags.png} alt="" />
             <div className="card-text">
@@ -10,6 +13,7 @@ function Card(props){
             <span>Capital:<span>{capital}</span></span>
             </div>
         </div>
+        </Link>
     )
 }
 
