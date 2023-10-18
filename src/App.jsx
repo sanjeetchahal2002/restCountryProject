@@ -14,7 +14,7 @@ function App() {
      <NavBar/>
      <Routes>
       <Route path="/" element = {<MainComponent/>}/>
-      <Route path="/country/:country" element = {<Page/>}/>
+      <Route path="alpha/:code" element = {<Page/>}/>
      </Routes>
     </ThemeContext.Provider>
   </BrowserRouter>

@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
 
 function Card(props){
-    let {flags,name,population,region,capital} = props.country
+    let {flags,name,population,region,capital,cca3} = props.country
     return(
-        <Link to = {`/country/${name.common}`}>
+        <Link to = {`/alpha/${cca3}`}>
         <div className="card">
             <img src= {flags.png} alt="" />
             <div className="card-text">

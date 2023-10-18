@@ -1,15 +1,43 @@
-
+import { Link } from "react-router-dom"
 export default function DetailedCard(props){
-    let {name,flags} = props.country[0]
-    console.log(name.nativeName)
+    let {name,flags,population,region,subregion,capital,tld,currencies,languages,borders} = props.country[0]
+    let capitalShow = capital && capital.length >= 0 ? capital[0] : "";
+    let nativename = name.nativeName && Object.values(name.nativeName).length >=0  ? Object.values(name.nativeName)[0].common : ""
+    let currency = currencies && Object.values(currencies)
+    currency = currency.map((ele) => (ele.name)).join(',')
+    let language = languages && Object.values(languages)
+    language = language.join(',')
     return (
         <div className="detailedCard">
+            <div>
+            <Link to='/'>
+                <button>  Back</button>
+            </Link>
+            </div>
+            <div className="detailedCard-content">
             <div className="detailedCard-left">
                 <img src= {`${flags.png}`} alt="" />
             </div>
             <div className="detailedCard-right">
+                <div className="name">
                 <h2>{name.common}</h2>
-                <span>Native Name:{}</span>
+                </div>
+                <div className="other-content">
+                  <div>
+                    <p>Native Name: <span>{nativename}</span></p>
+                    <p>Population: <span>{population}</span></p>
+                    <p>Region: <span>{region}</span></p>
+                    <p>Sub Region: <span>{subregion}</span></p>
+                    <p>Capital: <span>{capitalShow}</span></p>
+                </div>  
+                <div>
+                    <p>Top Level Domain: <span>{tld}</span></p>
+                    <p>Currencies: <span>{currency}</span></p>
+                    <p>Languages: <span>{language}</span></p>
+                </div>
+                </div>
+                <div className="borders">Borders : {borders !== undefined ? borders.map((ele) => <Link to = {`/alpha/${ele}`}><button>{ele}</button></Link>) : []}</div>
+            </div>
             </div>
         </div>
     )

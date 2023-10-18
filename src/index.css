@@ -214,7 +214,61 @@ a {
 
 
 /* Page 2 */
+*{
+  /* border:1px solid red; */
 
+}
 .detailedCard{
   display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  gap:2rem;
+  width:100%;
+  height: 100%;
+  width: 80%;
+}
+a > button {
+  border: 0;
+  /* background-color: transparent; */
+  color: gray;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0.5rem;
+  border-radius: 13px;
+}
+.detailedCard-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 7%;
+  height: 100%;
+  /* padding-left: 20%; */
+}
+.detailedCard-left{
+  height: 100%;
+}
+.detailedCard-left > img{
+  height: 120%;
+}
+.detailedCard-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* height:80%; */
+  /* width: 90%; */
+  
+}
+.other-content{
+  display:flex;
+  gap: 2rem;
+  
+}
+.borders{
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  
+}
+.other-content > div > p > span{
+  color: gray;
 }
