@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom"
-
+import { Link, json } from "react-router-dom"
 function Card(props){
     let {flags,name,population,region,capital,cca3} = props.country
+    localStorage.setItem(cca3,JSON.stringify(name.common))
     return(
         <Link to = {`/alpha/${cca3}`}>
         <div className="card">

@@ -15,7 +15,6 @@ function MainComponent(){
     const [orderBy,setOrderBy] = useState('')
     const [loader,setLoader] = useState(true)
     const [error,setError] = useState(false)
-
       
     useEffect(()=>{
         fetch('https://restcountries.com/v3.1/all')

@@ -127,6 +127,8 @@ a {
 }
 
 .error{
+  display: flex;
+  justify-content: center;
   color: #FF3D00;
 }
 
@@ -211,13 +213,15 @@ a {
   background-color: hsl(209, 23%, 22%);
 }
 
-
+.dark .detailedCard{
+  background-color: hsl(207, 24%, 18%);
+}
+.dark a > button{
+  background-color: hsl(209, 23%, 22%);
+}
 
 /* Page 2 */
-*{
-  /* border:1px solid red; */
 
-}
 .detailedCard{
   display: flex;
   flex-direction: column;
@@ -226,6 +230,7 @@ a {
   width:100%;
   height: 100%;
   width: 80%;
+  padding: 1%;
 }
 a > button {
   border: 0;
@@ -240,23 +245,23 @@ a > button {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 7%;
-  height: 100%;
-  /* padding-left: 20%; */
+  height: 30rem;
 }
 .detailedCard-left{
-  height: 100%;
+  height: 20rem;
+  width: 40%;
+  display: flex;
+  justify-content: center;
 }
 .detailedCard-left > img{
-  height: 120%;
+  width:16rem;
+  height: 10rem;
 }
 .detailedCard-right{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  /* height:80%; */
-  /* width: 90%; */
-  
+  height: 23rem;
+  width: 60%;
 }
 .other-content{
   display:flex;
@@ -267,8 +272,47 @@ a > button {
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  
+  flex-wrap: wrap;
 }
 .other-content > div > p > span{
   color: gray;
+}
+.borders a > button{
+  padding: 0.5;
+}
+.borders-bnt{
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+
+
+@media (max-width : 600px) {
+  .cards{
+    /* background-color: transparent; */
+    height: 150vh;
+    overflow-x:hidden;
+    overflow-y: hidden;
+  }
+  .detailedCard{
+    padding: 5%;
+    gap: 5rem;
+  }
+  .detailedCard-content{
+    flex-direction: column;
+  }
+  .other-content {
+    flex-direction: column;
+  }
+  .borders{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .borders-bnt{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
 }
