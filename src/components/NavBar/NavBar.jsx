@@ -15,9 +15,9 @@ function NavBar(){
                     onClick={()=> setDark(!isDark)
                     }
                     >
-                   <span>
+                   <p>
                    Dark Mode
-                   </span>
+                   </p>
                 </button>
             </div>                 
             </div>

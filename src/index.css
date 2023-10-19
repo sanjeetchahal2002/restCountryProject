@@ -1,11 +1,14 @@
 *{
   box-sizing: border-box;
   font-family: Nunito Sans;
+  padding: 0;
+  margin: 0;
 }
 .navbar-inner{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 2%;
   padding-left: 5%;
   padding-right: 5%;
   background-color: hsl(0, 0%, 100%);
@@ -18,13 +21,15 @@
 .navbar-button{
   display: flex;
   align-items: center;
+  gap: 5%;
 }
 .navbar-button > button {
   border: none;
   background-color: hsl(0, 0%, 100%);
 }
-.navbar-button > button > span{
+.navbar-button > button > p{
   font-weight: 600;
+  width: 70px;
 }
 .searchBar{
   display: flex;
@@ -289,11 +294,14 @@ a > button {
 
 
 @media (max-width : 600px) {
-  .cards{
-    /* background-color: transparent; */
-    height: 150vh;
-    overflow-x:hidden;
-    overflow-y: hidden;
+  .searchBar{
+    flex-direction: column;
+  }
+  .searchBar > span{
+    width: 100%;
+  }
+  .searchBar > select{
+    width: 100%;
   }
   .detailedCard{
     padding: 5%;
