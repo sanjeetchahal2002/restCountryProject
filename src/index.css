@@ -232,9 +232,8 @@ a {
   flex-direction: column;
   margin: 2rem;
   gap:2rem;
-  width:100%;
-  height: 100%;
   width: 80%;
+  height: 100vh;
   padding: 1%;
 }
 a > button {
@@ -283,7 +282,7 @@ a > button {
   color: gray;
 }
 .borders a > button{
-  padding: 0.5;
+  padding: 0.5rem;
 }
 .borders-bnt{
   display: flex;
@@ -304,8 +303,9 @@ a > button {
     width: 100%;
   }
   .detailedCard{
-    padding: 5%;
+    padding: 1%;
     gap: 5rem;
+    height: 110vh;
   }
   .detailedCard-content{
     flex-direction: column;
@@ -320,7 +320,13 @@ a > button {
   }
   .borders-bnt{
     display: flex;
-    gap: 15px;
+    gap: 3px;
     flex-wrap: wrap;
+  }
+  .borders a > button{
+    padding: 0.3rem;
+  }
+  .cards{
+    height: 100%;
   }
 }
